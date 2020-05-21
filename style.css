@@ -1,0 +1,139 @@
+/* link to Google fonts to allow browsers to access fonts, instructions for using them */
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&family=Roboto&display=swap");
+
+/*
+font-family: 'Bebas Neue', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* Sets all elements within the html file to border-box sizing */
+* {
+  box-sizing: border-box;
+}
+/* ELEMENT SELECTORS */
+body {
+  background-color: #e8e2db;
+}
+
+header,
+footer {
+  background-color: #1a3263;
+  display: block;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+header h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 45px;
+  letter-spacing: 0.1em;
+  margin: 0;
+  color: #e8e2db;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer p {
+  font-size: 20px;
+  margin: 0;
+  color: #e8e2db;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+img {
+  border-radius: 10px;
+}
+
+/* CLASS SELECTORS */
+/* MOBILE FIRST DESIGN */
+.wrapper {
+  width: 100%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+  margin: 10px;
+}
+/* PSEUDO CLASS SELECTORS (LOVE HATE NMEUMONIC) */
+a:link {
+  text-decoration: none;
+  color: #1a3263;
+}
+a:visited {
+  color: darkviolet;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: #f5564e;
+}
+
+/* ID SELECTORS */
+
+#portfolio h2 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+#about {
+  background-color: #f5564e;
+}
+
+#intro {
+  padding-bottom: 100px;
+}
+
+#contact {
+  padding: 20px 0;
+}
+/* MOBILE FIRST BASED MEDIA QUERY */
+
+@media all and (min-width: 800px) {
+  .wrapper {
+    width: 70%;
+    margin: auto;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+}

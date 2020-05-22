@@ -153,6 +153,11 @@ form input, form textarea {
 form textarea {
   height: 5rem;;
 }
+
+button {
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
 /* ID SELECTORS */
 
 #portfolio h2 {

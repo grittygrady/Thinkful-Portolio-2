@@ -20,7 +20,6 @@ body {
 header,
 footer {
   background-color: #1a3263;
-  display: block;
 }
 
 header {
@@ -38,9 +37,38 @@ header h1 {
   margin: 0;
   color: #e8e2db;
   padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center;
 }
+
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 0;
+  padding-right: 20px;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #e8e2db;
+  padding: 0 20px 0 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* PSEUDO CLASS SELECTORS FOR NAVIGATION MENU */
+
+header nav ul li a:link {color: #e8e2db;}
+
+header nav ul li a:visited {color: grey;}
 
 h2 {
   font-family: "Bebas Neue", cursive;
@@ -110,6 +138,21 @@ a:active {
   color: #f5564e;
 }
 
+form label {
+  /* ENSURES THAT TEXTAREA WILL BE DISPLAYED BELOW LABEL */
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px;
+}
+/* ENSURES THAT INPUT AND TEXTAREA TAKE UP THE WIDTH OF THEIR CONTAINER */
+form input, form textarea {
+  width: 100%;
+  border-radius: 5px;
+}
+
+form textarea {
+  height: 5rem;;
+}
 /* ID SELECTORS */
 
 #portfolio h2 {
@@ -124,15 +167,16 @@ a:active {
 }
 
 #intro {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 #contact {
   padding: 20px 0;
 }
 /* MOBILE FIRST BASED MEDIA QUERY */
+/* RULES ARE ONLY EXECUTED IF WIDTH OF VIEWPORT IS > 600PX */
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 600px) {
   .wrapper {
     width: 70%;
     margin: auto;
@@ -140,5 +184,28 @@ a:active {
 
   .group {
     flex-direction: row;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    margin-left: 75px;
+    font-size: 52px;
+    padding-bottom: 20px;
+  }
+
+  header nav {
+    margin-top: 20px;
+  }
+
+  header nav ul li a {
+    font-size: 22px;
+  }
+
+  header nav ul li a:visited{
+    color: grey;
   }
 }

@@ -58,6 +58,11 @@ header nav ul li {
   list-style-type: none;
 }
 
+ul li {
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+}
+
 header nav ul li a {
   color: #e8e2db;
   padding: 0 20px 0 0;
